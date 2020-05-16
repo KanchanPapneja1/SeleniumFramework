@@ -28,7 +28,7 @@ package com.training.sanity.tests;
 		private static Properties properties;
 		private ScreenShot screenShot;
 		
-	//	JavascriptExecutor js = (JavascriptExecutor)driver;
+	//	JavascriptExecutor js = (JavascriptExecutor)driver; Updates
 
 		@BeforeClass
 		public static void setUpBeforeClass() throws IOException {

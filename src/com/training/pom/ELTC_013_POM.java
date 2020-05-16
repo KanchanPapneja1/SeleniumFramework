@@ -1,6 +1,8 @@
 package com.training.pom;
 
 import org.openqa.selenium.WebDriver;
+
+//ELTC_013_POM
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -36,7 +38,7 @@ public class ELTC_013_POM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
-	
+	//updates
 	@FindBy(xpath="//a[contains(text(),'Course catalog')]")
 	private WebElement cctlg;
 	

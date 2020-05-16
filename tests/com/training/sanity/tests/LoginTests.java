@@ -48,6 +48,7 @@ public class LoginTests {
 		driver.quit();
 	}
 	@Test
+	//updates
 	public void validLoginTest() {
 	/*
 	 * 	loginPOM.sendUserName("admin");

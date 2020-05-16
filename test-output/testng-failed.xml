@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Sample test Suite]" guice-stage="DEVELOPMENT">
-  <test name="Sample test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test name="Default test(failed)">
     <classes>
-      <class name="com.training.sanity.tests.ELTC_014_CourseDetails">
+      <class name="com.training.sanity.tests.ELTC_053_Report">
         <methods>
-          <include name="setUpBeforeClass"/>
-          <include name="validLoginTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="setUpBeforeClass"/>
+          <include name="validLoginTest"/>
         </methods>
-      </class> <!-- com.training.sanity.tests.ELTC_014_CourseDetails -->
+      </class> <!-- com.training.sanity.tests.ELTC_053_Report -->
     </classes>
-  </test> <!-- Sample test(failed) -->
-</suite> <!-- Failed suite [Sample test Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -56,6 +56,7 @@ package com.training.sanity.tests;
 			loginPOM.sendPassword("admin@123");
 			loginPOM.clickLoginBtn(); 
 			screenShot.captureScreenShot("First");
+			Logout****
 			 */
 			
 			loginPOM.sendUserName("Kanchan");

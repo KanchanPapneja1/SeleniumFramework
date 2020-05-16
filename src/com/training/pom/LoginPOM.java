@@ -1,5 +1,8 @@
 package com.training.pom;
+//Login POM updates
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -38,7 +41,7 @@ public class LoginPOM {
 	public void clickLoginBtn() {
 		this.loginBtn.click(); 
 	}
-	
+
 	@FindBy(xpath="//a[contains(text(),'Course catalog')]")
 	private WebElement cctlg;
 	
@@ -132,5 +135,106 @@ public class LoginPOM {
 		this.LogoutBtn.click();
 	}
 	
+//	***********************************************Medium TCs**********************************************
 	
+	@FindBy(xpath="//a[contains(text(),'Administration')]")
+ 
+	private WebElement AdminTab;
+	
+	public void AdminTabClick() {
+		this.AdminTab.click();
+	}
+	
+	@FindBy(xpath= "//div[@class='alert alert-info']//span[contains(text(),'×')]")
+	private WebElement msg;
+	
+	public void msgclick() {
+		this.msg.click();
+		System.out.println("Msg closed");
+	}
+	
+	
+	
+	@FindBy(xpath="//a[contains(text(),'User list')]")
+	//@FindBy(xpath= "//div[@class='panel panel-default block-admin-users']//a[contains(text(),'User list')]")
+	private WebElement UserList;
+	
+	public void UserListClick() {
+		this.UserList.click();
+	}
+	
+	@FindBy(id="search_simple_keyword")
+	private WebElement SearchUser;
+	
+	public void giveusername(String name)
+	{
+		this.SearchUser.sendKeys(name);
+	}
+
+	@FindBy(id="search_simple_submit")
+	private WebElement UserSearchBtn;
+	
+	public void UserSearchBtnClick()
+	{
+		this.UserSearchBtn.click();
+	}
+			
+	//***************Below code isn't working ****************
+	
+	@FindBy(xpath="//table[@class='table table-bordered data_table']//tr")
+	private List<WebElement> UserTable;
+//	int noofRows = UserTable.size();
+	
+	
+	public void EditButtonClick() {
+		
+		for(int i=2; i<=UserTable.size(); i++) 
+		{
+        System.out.println("No of rows"+ UserTable.size());
+	    String name = driver.findElement(By.xpath("//table[@class='table table-bordered data_table']/tbody/tr["+i+"]/td[4]")).getText();
+	        System.out.println("UserName = "+name);
+	    if(name.equalsIgnoreCase("KanchanTest")) {  	
+	    	
+	       driver.findElement(By.xpath("//table[@class='table table-bordered data_table']/tbody/tr["+i+"]/td[11]/a[6]")).click();
+	        System.out.println("You can now edit");
+	        
+		}
+		}
+	}
+	
+	//**************** Above code isn't working ****************
+	
+		@FindBy(id="user_edit_email")
+		private WebElement emailtxtbox;
+		
+		public void emailtxtboxclear()
+		{
+			this.emailtxtbox.clear();
+		}
+		
+		public void sendnewemail(String email)
+		{
+			this.emailtxtbox.sendKeys(email);
+		}
+		
+		@FindBy(css="input#qf_f4924c")
+		private WebElement inactiveradiobtn;
+		
+		public void radiobtnclick() {
+			if(inactiveradiobtn.isDisplayed()==true) {
+			this.inactiveradiobtn.click();
+		}else {
+			System.out.println("Radio Button isn't present");
+		}
+		}
+		@FindBy(xpath="//button[@id='user_edit_submit']")
+		private WebElement savebtn;
+		
+		public void savebtnclk()
+		{
+			this.savebtnclk();
+		}
 }
+	
+
+
